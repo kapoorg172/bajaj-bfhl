@@ -1,10 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const cors = require("cors");
+// const cors=
 const app = express();
+app.use(cors());
+// app.use(cors());
 app.use(bodyParser.json());
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // Helper function to separate numbers and alphabets
 function separateData(data) {
